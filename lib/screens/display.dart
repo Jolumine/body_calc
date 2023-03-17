@@ -63,7 +63,7 @@ class DisplayState extends State<Display> {
                 ), 
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 650,
+                  height: MediaQuery.of(context).size.height-175,
                   decoration: const BoxDecoration(
                     color: blue,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0)), 
@@ -109,21 +109,44 @@ class DisplayState extends State<Display> {
                           child: Center(child: Text("$bc kcal", style: const TextStyle(color: grey, fontSize: 18)))
                         ),
                       ), 
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50), 
-                        child: Container(
-                          width: 150,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            color: grey, 
-                            borderRadius: const BorderRadius.all(Radius.circular(50.0)), 
-                            border: Border.all(color: grey, width: 2)
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 50, left: 10), 
+                            child: Container(
+                              width: 150,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: grey, 
+                                borderRadius: const BorderRadius.all(Radius.circular(50.0)), 
+                                border: Border.all(color: grey, width: 2)
+                              ),
+                              child: InkWell(
+                                onTap: (){
+                                  Navigator.of(context).pop(); 
+                                },
+                                child: const Center(child: Text("Back", style: TextStyle(color: blue, fontSize: 25, fontWeight: FontWeight.bold)))
+                              )
+                            ),
                           ),
-                          child: InkWell(
-                            onTap: () => exit(0),
-                            child: const Center(child: Text("Exit", style: TextStyle(color: blue, fontSize: 25, fontWeight: FontWeight.bold)))
+                          Padding(
+                            padding: const EdgeInsets.only(top: 50, right: 10), 
+                            child: Container(
+                              width: 150,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: grey, 
+                                borderRadius: const BorderRadius.all(Radius.circular(50.0)), 
+                                border: Border.all(color: grey, width: 2)
+                              ),
+                              child: InkWell(
+                                onTap: () => exit(0),
+                                child: const Center(child: Text("Exit", style: TextStyle(color: blue, fontSize: 25, fontWeight: FontWeight.bold)))
+                              )
+                            ),
                           )
-                        ),
+                        ],
                       )
                     ],
                   ),

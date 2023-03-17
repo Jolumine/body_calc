@@ -1,16 +1,12 @@
-# body_calc
+# Body Calculator 
 
-A new Flutter project.
+You can enter your data and let the app calculate your BMI and your basic consumption. 
 
-## Getting Started
+Project created to learn Flutter. 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## UI 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Display](assets/git/Screenshot_1679069284.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Results](assets/git/Screenshot_1679069298.png)

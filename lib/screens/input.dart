@@ -50,7 +50,7 @@ class InputState extends State<Input>{
                 ), 
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 650,
+                  height: MediaQuery.of(context).size.height-175,
                   decoration: const BoxDecoration(
                     color: blue,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0)), 
